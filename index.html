@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizador de Contracheques</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Visualizador de Contracheques</h1>
+        
+        <div class="login-section">
+            <button id="loginButton" class="login-btn">
+                <span class="icon">🔓</span>
+                Abrir Portal para Login
+            </button>
+            <div id="loginStatus" class="login-status"></div>
+        </div>
+        
+        <div class="controls">
+            <div class="input-group">
+                <label for="matricula">Matrícula:</label>
+                <input type="text" id="matricula" placeholder="Digite sua matrícula">
+            </div>
+            
+            <div class="periodo">
+                <div class="input-group">
+                    <label for="anoInicio">Ano Início:</label>
+                    <input type="number" id="anoInicio" min="2000" max="2099" value="2023">
+                </div>
+                
+                <div class="input-group">
+                    <label for="mesInicio">Mês Início:</label>
+                    <input type="number" id="mesInicio" min="1" max="12" value="1">
+                </div>
+                
+                <div class="input-group">
+                    <label for="anoFim">Ano Fim:</label>
+                    <input type="number" id="anoFim" min="2000" max="2099" value="2023">
+                </div>
+                
+                <div class="input-group">
+                    <label for="mesFim">Mês Fim:</label>
+                    <input type="number" id="mesFim" min="1" max="12" value="12">
+                </div>
+            </div>
+            
+            <button id="gerarButton" class="generate-btn">Gerar PDFs</button>
+        </div>
+        
+        <div class="zoom-control">
+            <label for="zoomSlider">Tamanho do PDF:</label>
+            <input type="range" id="zoomSlider" min="300" max="1200" value="600">
+            <span id="zoomValue">600px</span>
+        </div>
+        
+        <div id="pdfContainer" class="pdf-container"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
