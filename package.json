@@ -15,7 +15,7 @@
     "pdf",
     "visualizador"
   ],
-  "author": "Seu Nome",
+  "author": "Marck616",
   "license": "ISC",
   "dependencies": {
     "axios": "^1.6.7",
